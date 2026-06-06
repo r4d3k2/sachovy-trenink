@@ -496,6 +496,82 @@ export const featureGroups: FeatureGroup[] = [
     ],
   },
   {
+    heading: "Lichess – v appce",
+    rows: [
+      {
+        feature: "Puzzle Themes (filtr)",
+        availability: "ok",
+        availabilityLabel: "V appce",
+        pathOrUrl: "Puzzles → Puzzle Themes",
+      },
+      {
+        feature: "Partie online (Rapid, Classical)",
+        availability: "ok",
+        availabilityLabel: "V appce",
+        pathOrUrl: "Play → Quick Pairing",
+      },
+      {
+        feature: "Partie vs. počítač",
+        availability: "ok",
+        availabilityLabel: "V appce",
+        pathOrUrl: "Play → Play the computer → Level 3–4",
+      },
+      {
+        feature: "Analýza partie (základní)",
+        availability: "limited",
+        availabilityLabel: "Omezeno",
+        pathOrUrl: "Po partii → Request Analysis",
+      },
+    ],
+  },
+  {
+    heading: "Lichess – pouze web",
+    rows: [
+      {
+        feature: "Plný Stockfish engine",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org → partie → Computer Analysis",
+        url: "https://lichess.org/",
+      },
+      {
+        feature: "Opening Trainer",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org/learn#/1",
+        url: "https://lichess.org/learn#/1",
+      },
+      {
+        feature: "Studie (Studies)",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org/study",
+        url: "https://lichess.org/study",
+      },
+      {
+        feature: "Puzzle Dashboard (rating per téma)",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org/training → Themes",
+        url: "https://lichess.org/training/dashboard/30/dashboard",
+      },
+      {
+        feature: "Puzzle Storm",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org/storm",
+        url: "https://lichess.org/storm",
+      },
+      {
+        feature: "Puzzle Racer",
+        availability: "web-only",
+        availabilityLabel: "Pouze web",
+        pathOrUrl: "lichess.org/racer",
+        url: "https://lichess.org/racer",
+      },
+    ],
+  },
+  {
     heading: "Duolingo",
     rows: [
       {
@@ -509,15 +585,16 @@ export const featureGroups: FeatureGroup[] = [
 ];
 
 export const featureNotes: string[] = [
-  "Plán je čistě Chess.com Diamond + Duolingo – stačí jediná appka pro celý taktický + výukový blok.",
+  "Učební plán běží na Chess.com Diamond + Duolingo. Lichess sekce níže slouží jako reference alternativy zdarma.",
   "Game Review s Coachem dává nejlepší výstup z partie vs. živý hráč (ne vs. bot).",
   "Practice (Openings / Drills / Master Games) je dostupný jen na webu – v iPhone appce nelze.",
   "Insights jsou týdenní přehled – nemá smysl koukat denně, statistika se nasbírá až po více partiích.",
+  "Lichess je celý zdarma, bez reklam – ale nemá Coach (Game Review), Insights ani Master Games. Některé funkce (Studies, Opening Trainer, Puzzle Storm/Racer) jsou jen na webu.",
   "Duolingo Chess je samostatná appka – krátký denní blok 1–2 lekce, ne víc.",
 ];
 
 export const featureIntro =
-  "Co je v Chess.com appce a co jen na webu. Ověřeno na základě oficiální dokumentace Chess.com.";
+  "Co najdeš v jednotlivých appkách a co jen na webu. Plán běží na Chess.com Diamond + Duolingo, Lichess je referenční alternativa zdarma.";
 
 export function getDayPlan(key: DayKey): DayPlan {
   const found = dayPlans.find((p) => p.key === key);
